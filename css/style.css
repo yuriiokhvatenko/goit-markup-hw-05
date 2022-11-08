@@ -81,7 +81,8 @@ a {
   font-size: 36px;
   line-height: calc(42 / 36);
   text-align: center;
-  letter-spacing: 0.03em;;
+  letter-spacing: 0.03em;
+  
 }
 /* Header */
 /* Logo */
@@ -676,9 +677,9 @@ box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1p
   width: 100vw;
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.2);
-  opacity: 1;
-  visibility: visible;
-  pointer-events: initial;
+  
+  transition: opacity var(--primary-duration) var(--primary-ttf), 
+  visibility var(--primary-duration) var(--primary-ttf);
 }
 
 .backdrop.is-hidden {
@@ -695,13 +696,11 @@ box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1p
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: #fff;
-  opacity: 1;
-  transition: transform var(--primary-duration) var(--primary-ttf), opacity var(--primary-duration) var(--primary-ttf);
+  transition: transform var(--primary-duration) var(--primary-ttf);
 }
 
 .backdrop.is-hidden .modal {
   transform: translate(-50%, -30%);
-  opacity: 0;
 }
 
 .modal-btn {
